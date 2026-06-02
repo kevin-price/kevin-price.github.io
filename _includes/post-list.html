@@ -53,7 +53,13 @@
 		    	{% assign wordCount = post.content | number_of_words %}
 			
 			<!-- ARTICLE PREVIEW -->
-			{{ post.excerpt | truncatewords: site.EXCERPT_WORDS }}
+			{% if post.custom_excerpt %}
+			  {{ post.custom_excerpt }}
+			{% elsif post.content contains '<!--end_summary-->' %}
+			  {{ post.content | split:'<!--end_summary-->' | first }}
+			{% else %}
+			  {{ post.excerpt | truncatewords: site.EXCERPT_WORDS }}
+			{% endif %}
 			
 			<!-- add "continued" label for truncated posts-->
 			{% if wordCount > site.EXCERPT_WORDS %} 

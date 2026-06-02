@@ -59,7 +59,7 @@
                         <div class="span2"> <!-- logo -->
                             <div id="logo">
                                 <a href="http://localhost:4000">
-                                    <img alt="Kevin Price" src="http://localhost:4000//images/me.jpg" />
+                                    <img alt="Kevin Price" src="http://localhost:4000/images/me.jpg" />
                                 </a>
                             </div> <!-- logo -->
                         </div> <!-- logo span -->
@@ -128,21 +128,18 @@
     <div class="span7">
         <section>
             <article class="entry">
-                <!-- Summary:  -->
-
-<p>If you were to toss a coin on an artificial gravity space station, where would it end up? If you try my new <a href="https://coriolis-station.netlify.app">computer model</a>, you will discover that it won’t land at your feet where you would expect it to. I created this React web app to demonstrate the Coriolis effect, which would be apparent in artificial gravity, or gravity produced by spinning. This model teaches a complicated Physics principle in a simple way.</p>
+                <p>If you were to toss a coin on an artificial gravity space station, where would it end up? If you try my new <a href="https://coriolis-station.netlify.app">computer model</a>, you will discover that it won’t land at your feet where you would expect it to. I created this React web app to demonstrate the Coriolis effect, which would be apparent in artificial gravity, or gravity produced by spinning. This model teaches a complicated Physics principle in a simple way.
+<!--end_summary--></p>
 
 <p>I am very pleased with the result, the product of many months of work. This page is both a computer model and an article. The following text describes some of the steps I took to generate this model.</p>
 
-<!-- PELICAN_END_SUMMARY -->
-
-<p>###Coding goals</p>
+<h3 id="coding-goals">Coding goals</h3>
 
 <p>As I state in <a href="https://coriolis-station-article.netlify.app">my article</a>, the Coriolis effect is an effect of rotating environments (artificial gravity) that distorts objects’ movement, causing objects to move to where you do not expect them. My goal was to take this complicated physics principle and simplify it so that anyone can understand it. I wanted to also <em>quantify</em> how “weird” each throw is with a simple number.</p>
 
 <p>I wanted the model to be powerful enough to be able to render whatever movement a user wishes to model. With this objective, I hoped to make the effects of artificial gravity perfectly clear. Furthermore, I wanted the page to be compelling, clean, intuitive, understandable, beautiful, fast, resizable, mobile-friendly, and not glitchy.</p>
 
-<p>###Steps to produce the model</p>
+<h3 id="steps-to-produce-the-model">Steps to produce the model</h3>
 
 <p>This model came about in several stages. The page started from a simple idea, though the final result is more sophisticated than what I had initially planned.</p>
 
@@ -151,7 +148,7 @@
     <p>The first stage of this model was to calculate the landing position of the outer space coin toss, so I could quantify how “weird” the toss is. The model needed to <em>compute</em> these coordinates for the viewer. <a href="https://coriolis-station-article.netlify.app/math/">This page</a> explains the math I used.</p>
   </li>
   <li>
-    <p>With the landing coordinates, I could calculate the distance the coin would land away from the person; this is the measurable result of the Coriolis effect. I wrote the math <a href="images/CoriolisTable.py">into Python code</a> to generate a graph that shows the relationship between the diameter of the station and the “weirdness” of the throw produced by the Coriolis effect. These graphs assume the coin was tossed from four feet up to a total height of 7 feet.</p>
+    <p>With the landing coordinates, I could calculate the distance the coin would land away from the person; this is the measurable result of the Coriolis effect. I wrote the math <a href="/images/CoriolisTable.py">into Python code</a> to generate a graph that shows the relationship between the diameter of the station and the “weirdness” of the throw produced by the Coriolis effect. These graphs assume the coin was tossed from four feet up to a total height of 7 feet.</p>
   </li>
   <li>
     <p>I wanted to demonstrate what any throw would <em>look</em> like. I generated a series of points following the coin’s movement, allowing me to plot these points on an HTML canvas element. These points needed to be in the <em>thrower’s</em> reference frame. Again, here is <a href="https://coriolis-station-article.netlify.app/math-geometry/">the math</a> I used to develop this portion of the project.</p>
@@ -164,24 +161,24 @@
   </li>
 </ol>
 
-<p>###Some things I encountered while coding
-Here are some insights into the challenges I encountered while coding this webpage.</p>
+<h3 id="some-things-i-encountered-while-coding">Some things I encountered while coding</h3>
+<p>Here are some insights into the challenges I encountered while coding this webpage.</p>
 
-<p>#####Insufficient Decimal Places</p>
+<h5 id="insufficient-decimal-places">Insufficient Decimal Places</h5>
 
 <p>I discovered that an ordinary variable in Python or JavaScript, with fifteen decimal places, is not accurate enough to calculate the results that I wanted. These results were glitchy! I found a solution with the Decimal.js JavaScript library, which makes it possible to use longer decimals in Javascript. In Python, I made use of the Decimal package.</p>
 
 <p>Here is my glitchy Python graph with the standard number of decimal places:</p>
 
-<p><img src="/img/CoriolisGraphGlitchy.png" alt="glitchy_graph" title="The Python graph is glitchy with the standard number of decimal places." /></p>
+<p><img src="/images/CoriolisGraphGlitchy.png" alt="glitchy_graph" title="The Python graph is glitchy with the standard number of decimal places." /></p>
 
 <p>Now, with additional decimal places:</p>
 
-<p><img src="/img/CoriolisGraph.png" alt="smooth_graph" title="The Python graph is smooth with 30 decimal places." /></p>
+<p><img src="/images/CoriolisGraph.png" alt="smooth_graph" title="The Python graph is smooth with 30 decimal places." /></p>
 
-<p>The Python code I wrote to generate these graphs can be found <a href="/img/CoriolisTable.py">here</a>.</p>
+<p>The Python code I wrote to generate these graphs can be found <a href="/images/CoriolisTable.py">here</a>.</p>
 
-<p>#####A Hidden Feature: Querystrings</p>
+<h5 id="a-hidden-feature-querystrings">A Hidden Feature: Querystrings</h5>
 
 <p>Just in case I want to demonstrate something about the Coriolis effect, I added the ability to <em>open</em> the model page with specific settings. Querystrings are extra modifiers at the end of your URL; it might look like this: http://coriolis-station.netlify.app/#&amp;diameter=400.</p>
 
@@ -201,13 +198,13 @@ Here are some insights into the challenges I encountered while coding this webpa
   <li><em>inputMenu</em> (&amp;inputmenu=false): I can open the model with the input menu open or closed. Note, this menu is already open by default in most views.</li>
 </ul>
 
-<p>#####Logarithmic Sliders</p>
+<h5 id="logarithmic-sliders">Logarithmic Sliders</h5>
 
 <p>I produced logarithmic sliders for the model’s input. This way, it is intuitive what ranges are acceptable. I found the logic I needed at <a href="https://codepen.io/willat600series/pen/ojzYJx">this site</a>.</p>
 
 <p>My logarithmic ranges needed to <em>include</em> zero. The log of zero does not normally compute! My code uses an offset to allow me to use zero while ensuring the computer does not attempt to calculate the log of zero.</p>
 
-<p>###Conclusion</p>
+<h3 id="conclusion">Conclusion</h3>
 
 <p>This was a very fun project that kept me involved for several years. I was happy to find some simple solutions to my complex coding problems. I hope I taught you something about artificial gravity!</p>
 
@@ -268,7 +265,7 @@ var disqus_shortname = 'priceisright204'; // required: replace example with your
 { include comments.html } -->
 
 	                         
-			    </div>
+							</div>
                         </div>
                     </div> <!-- content row -->
 
@@ -305,7 +302,7 @@ var disqus_shortname = 'priceisright204'; // required: replace example with your
                             <div id="social-icons">
                                 
                                     <span class="social-icon">
-                                        <a href="https://github.com/kevindprice" target="_blank" title="GitHub">
+                                        <a href="https://github.com/kevin-price" target="_blank" title="GitHub">
                                             <i class="icon-github-alt"></i>
                                         </a>
                                     </span>
@@ -344,7 +341,7 @@ var disqus_shortname = 'priceisright204'; // required: replace example with your
 				
 					<li><a href="https://coriolis-station-article.netlify.app" target="_blank">Article: Spinning Space Stations</a></li>
 				
-					<li><a href="https://inverted-maze.netlify.app#&tutorial=true" target="_blank">Inverted Maze</a></li>
+					<li><a href="https://inverted-maze.netlify.app#&tutorial=true" target="_blank">Open Maze</a></li>
 				
 					<li><a href="https://us-states-comparison.netlify.app" target="_blank">Comparing the US States</a></li>
 				

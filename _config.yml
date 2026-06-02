@@ -24,8 +24,8 @@ email: kprice204@gmail.com
 description: >- # this means to ignore newlines until "baseurl:"
   I am a computer programmer and math instructor. This is the home for my personal projects and activities.
 baseurl: "" # the subpath of your site, e.g. /blog
-#url: "http://kevindprice.github.io" # the base hostname & protocol for your site, e.g. http://example.com
-url: "https://kevindprice.github.io"
+#url: "http://kevin-price.github.io" # the base hostname & protocol for your site, e.g. http://example.com
+url: "https://kevin-price.github.io"
 # url: "localhost:4000" 
 # twitter_username: jekyllrb
 #SITETAGLINE: "My projects and ideas."
@@ -49,7 +49,7 @@ kramdown:
 DISQUS_SHORTNAME: "priceisright204"
 github_username: kevindprice
 SITELOGO: "/images/me.jpg"
-GITHUB_URL: "https://github.com/kevindprice"
+GITHUB_URL: "https://github.com/kevin-price"
 GOOGLE_ANALYTICS_CODE: "UA-104695649-1" #OLD FORMAT (universal analytics), outdated and not used.
 google_analytics: "G-SSHVSFZF4G" #Google Analytics 4
 FACEBOOK_URL: "http://facebook.com/kevin.price.204"
@@ -67,7 +67,7 @@ LINKS:
     link: "https://coriolis-station.netlify.app"
   - title: "Article: Spinning Space Stations"
     link: "https://coriolis-station-article.netlify.app"
-  - title: "Inverted Maze"
+  - title: "Open Maze"
     link: "https://inverted-maze.netlify.app#&tutorial=true"
   - title: "Comparing the US States"
     link: "https://us-states-comparison.netlify.app"

@@ -6,12 +6,11 @@ tags: [Mathematics]
 slug: area-of-circle
 authors: Kevin Price
 ---
-<!-- Summary:  -->
 
-<!-- PELICAN_END_SUMMARY -->
+I was recently thinking about the widely-known equation for the area of a circle, $$A=\pi r^2$$. I realized that even though I have taught this equation to dozens of students, I did not know how the equation is derived. In other words, yes this is the correct equation. But *why* is it? Furthermore, how did humanity arrive at this equation anciently? 
+<!--end_summary-->
 
-
-I was recently thinking about the widely-known equation for the area of a circle, $$A=\pi r^2$$. I realized that even though I have taught this equation to dozens of students, I did not know how the equation is derived. In other words, yes this is the correct equation. But *why* is it? Furthermore, how did humanity arrive at this equation anciently? In my search for an intuitive answer, I found myself liking an approach using regular figures the best. This is more or less the approach that Archimedes (287-212 BC) used to prove $$A= \pi r^2$$.
+In my search for an intuitive answer, I found myself liking an approach using regular figures the best. This is more or less the approach that Archimedes (287-212 BC) used to prove $$A= \pi r^2$$.
 
 ### Archimedes' Method
 Before I dive into the regular shapes that Archimedes used, I will start simple: with the area of a triangle. It makes sense that the area of a triangle is $$A=\frac{1}{2}bh$$ because a triangle is a rectangle cut in half. You can draw a rectangle and call one side "b" for base and the other "h" for height ($$A=bh$$). Cut it in half and it will produce two triangles. So, since cutting a rectangle in half makes a triangle, we know that the area of a triangle is $$A=\frac{1}{2}bh$$.

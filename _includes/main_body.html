@@ -3,7 +3,7 @@
                         <div class="span2"> <!-- logo -->
                             <div id="logo">
                                 <a href="{{site.url}}">
-                                    <img alt="{{site.title}}" src="{{site.url}}/{{site.SITELOGO}}" />
+                                    <img alt="{{site.title}}" src="{{site.url}}{{site.SITELOGO}}" />
                                 </a>
                             </div> <!-- logo -->
                         </div> <!-- logo span -->
@@ -37,7 +37,7 @@
 	                         {% elsif mylayout == "post" %}
 	                         {% include post-content.html %}
 	                         {% endif %}
-			    </div>
+							</div>
                         </div>
                     </div> <!-- content row -->
 
