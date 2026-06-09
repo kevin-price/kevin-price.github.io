@@ -46,7 +46,7 @@ $$A=\frac{1}{2}ap$$: $$a$$ is for apothem and $$p$$ is for perimeter.
 
 What happens if we increase the number of sides to infinity? This shape would  become a circle. We call the *perimeter* of this shape the *circumference* (C), and the *apothem* would become equivalent to a *radius* (r). Here, at 16 sides (below), the shape already begins to look like a circle.
 
-![circle](/images/circle.png "A circle is a regular shape with infinite sides.")
+![circle](/images/circle.jpg "A circle is a regular shape with infinite sides.")
 
 We just studied what happens when the number of sides of a regular figure approaches infinity: it becomes a circle. We will rename the variables from the last formula for more circle-friendly variables.
 
