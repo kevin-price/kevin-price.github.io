@@ -1,53 +1,46 @@
 <div class="article-page"> <!--This block is what creates the paper-tab illusion-->
-    <div class="span7 offset2">
-	<header class="article">
-	    <h2><a href="{{site.url}}{{post.url}}" rel="bookmark">{{page.title}}</a></h2>
-			<div style="display:inline-block; margin-top: 3px; font-family: Baskerville, Garamond, Palatino;">— {{page.category}} —&nbsp;&nbsp;</div>
-	    <time datetime="{{ post.date }}">
-		{{ page.date| date: "%B %-d, %Y" }}
-	    </time>
-	</header>
+    <div class="row">
+        <div class="col-md-10 offset-md-2">
+            <header class="article">
+                <h2><a href="{{site.url}}{{post.url}}" rel="bookmark">{{page.title}}</a></h2>
+                <div style="display:inline-block; margin-top: 3px; font-family: Baskerville, Garamond, Palatino;">— {{page.category}} —&nbsp;&nbsp;</div>
+                <time datetime="{{ post.date }}">
+                    {{ page.date| date: "%B %-d, %Y" }}
+                </time>
+            </header>
+        </div>
     </div>
-
-    <div class="span2">
-        {% if page.tags %}
-            <div class="article-meta article-meta-border">
-              <dl class="dl-horizontal">
-              <dt><i class="icon-tags"></i></dt>
-		<dd>
-			{% assign tags = page.tags | join %}
-			
-			{% assign tags = tags | split: "," %}
-			
-			{% for tag in tags %}
-			    <a href="/tags#{{ tag | strip | replace: " ", "-" }}">{{ tag }}</a>
-			{% unless forloop.last %}
-			    <span class="separator">/</span>
-			{% endunless %}
-			{% endfor %}
-               </dd>
-	      </dl>
-	      <b class="border-notch notch"></b>
-	      <b class="notch"></b>
-            </div>
-	{% endif %}
-
-        <!--{ block article_meta }
-        { endblock } -->
+    <div class="row">
+        <div class="col-md-2">
+            {% if page.tags %}
+                <div class="article-meta article-meta-border">
+                    <dl class="dl-horizontal">
+                        <dt><i class="icon-tags"></i></dt>
+                        <dd>
+                            {% assign tags = page.tags | join %}
+                            {% assign tags = tags | split: "," %}
+                            {% for tag in tags %}
+                                <a href="/tags#{{ tag | strip | replace: " ", "-" }}">{{ tag }}</a>
+                                {% unless forloop.last %}<span class="separator">/</span>{% endunless %}
+                            {% endfor %}
+                        </dd>
+                    </dl>
+                    <b class="border-notch notch"></b>
+                    <b class="notch"></b>
+                </div>
+            {% endif %}
+        </div>
+        <div class="col-md-10">
+            <section>
+                <article class="entry">
+                    {{ content }}
+                    {% if site.DISQUS_SHORTNAME %}
+                        {% include disqus-comments.html %}
+                    {% endif %}
+                </article>
+            </section>
+        </div>
     </div>
-
-    <div class="span7">
-        <section>
-            <article class="entry">
-                {{ content }}
-                <!--{ block article_footer } { endblock }-->
-
-                {% if site.DISQUS_SHORTNAME %}
-		{% include disqus-comments.html %}	
-                {% endif %}
-            </article>
-        </section>
-    </div> <!-- span -->
 </div>
 
 

@@ -1,14 +1,14 @@
-                <div class="span9">
-                    <div class="row">
-                        <div class="span2"> <!-- logo -->
+                <div class="col-md-9">
+                    <div class="row align-items-center">
+                        <div class="col-md-3"> <!-- logo -->
                             <div id="logo">
                                 <a href="{{site.url}}">
                                     <img alt="{{site.title}}" src="{{site.url}}{{site.SITELOGO}}" />
                                 </a>
                             </div> <!-- logo -->
                         </div> <!-- logo span -->
-						
-                        <div class="span7"> <!-- header -->
+
+                        <div class="col-md-9"> <!-- header -->
                             <!--[if lt IE 9]>
                                 <p class="chromeframe alert alert-warning">You are using an <strong>outdated</strong> browser, and this site might not look best in it. Please <a href="http://browsehappy.com/">upgrade your browser</a> or <a href="http://www.google.com/chromeframe/?redirect=true">activate Google Chrome Frame</a> to improve your experience.</p>
                             <![endif]-->
@@ -31,18 +31,18 @@
                     <div class="row"> <!-- content -->
                         <div class="content">
                             <div id="index">
-	                         <!-- CONTENT -->
-	                         {% if mylayout == "homepage" %}
-	                         {% include post-list.html %}
-	                         {% elsif mylayout == "post" %}
-	                         {% include post-content.html %}
-	                         {% endif %}
-							</div>
+                             <!-- CONTENT -->
+                             {% if mylayout == "homepage" %}
+                             {% include post-list.html %}
+                             {% elsif mylayout == "post" %}
+                             {% include post-content.html %}
+                             {% endif %}
+                            </div>
                         </div>
                     </div> <!-- content row -->
 
                     <div class="row"> <!-- footer -->
-                        <div class="span7 offset2">
+                        <div class="col-md-10 offset-md-2">
                             <footer id="site-footer">
                                 <p>
                                     <!-- <a href="{{LICENSE_URL}}" target="_blank">

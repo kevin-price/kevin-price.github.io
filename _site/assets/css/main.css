@@ -3,6 +3,32 @@ html {
     min-height: 100%;
 }
 
+/* Cap the page width for readability; center it on large monitors */
+.container {
+    max-width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* Bootstrap 5 adds padding to every column (gutter), creating a visible gap between the
+   main content and sidebar. Remove it from only the outer layout columns at desktop widths
+   so inner rows are unaffected. Below md, leave default padding so text doesn't hit screen edges. */
+/*@media (min-width: 768px) {
+    .container > .row > .col-md-9 {
+        padding-left: 0;
+        padding-right: 0;
+    }
+    .container > .row > .col-md-3 {
+        padding-left: 0;
+    }
+}*/
+
+/* Bootstrap 5 gives list-group-item a white background; keep it transparent so body texture shows through */
+.list-group-item {
+    background-color: transparent;
+    border: none;
+}
+
 body {
     background-image: url(../img/bg.png);
     border-top: .5rem solid #DC143C;
@@ -39,11 +65,14 @@ hr {
 #logo {
     text-align: center;
     margin: 0 auto;
-    padding-top: 1rem;
-    max-width: 140px;
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+	max-width: 170px;
 }
 #logo img{
 	border-radius:17px;
+	width: 100%;
+	height: auto;
 }
 
 
@@ -51,7 +80,7 @@ hr {
     .article-page {
         background-image: url(../img/page_shadow_background.png);
         background-repeat: no-repeat;
-        background-position-x: 5rem;
+        background-position-x: 3.5rem;
         background-position-y: 0;
 
         padding-top: 1.25rem;
@@ -61,7 +90,7 @@ hr {
 
 @media screen and (min-width: 980px) {
     .article-page {
-        background-position-x: 7rem;
+        background-position-x: 4.5rem;
     }
 }
 
@@ -226,7 +255,6 @@ article h3 {
 
 header.article {
     margin-bottom: 1rem;
-	margin-left: -13px;
 }
 
 header.article h2 {
@@ -244,6 +272,7 @@ header.article h2 a {
     position: relative;
     padding: 0.5rem 1rem;
     margin-bottom: 1rem;
+	margin-right: -7px;
     background-color: rgb(252, 255, 244);
 
     -webkit-box-shadow: 0 0 48px 0 rgba(0,0,0,0.15);
@@ -259,12 +288,15 @@ header.article h2 a {
 }
 
 .article-meta dl dt {
-    width: 20px;
+    width: auto;
     text-align: center;
+    margin-bottom: 0.25rem;
 }
 
 .article-meta dl.dl-horizontal dd {
-    margin-left: 20px;
+    margin-left: 0;
+    text-align: center;
+    word-break: break-word;
 }
 
 .article-meta .separator {
@@ -508,33 +540,45 @@ figcaption {
 }
 
 /* PAGINATION */
-.panel-footer{
-     text-align: center;
-     margin-bottom: 15px;
-     
-     a {
-        cursor: pointer;
-        display: inline-block;
-        height: 25px;
-        width: 40px;
-        font-size:1.2em;
-        /*font-weight:bold;*/
-     	     &:not(:last-child) {
-		margin-right: 5px;
-	     }
-	}
-     ul, li {
-        list-style-type: none;
-        margin: 0;
-        padding: 0;
-        background-image: none;
-        display: inline-block;
-     } 
-     ul {
-        border-radius: 10px;
-        padding: 10px 20px;
-        background-image: url(/assets/img/paperboard-texture_95678-72.avif);
-     }
+.panel-footer {
+    text-align: center;
+    margin-bottom: 15px;
+}
+.panel-footer .pagination {
+    display: inline-flex;
+    border-radius: 10px;
+    padding: 10px 20px;
+    background-image: url(/assets/img/paperboard-texture_95678-72.avif);
+    background-color: transparent;
+    gap: 2px;
+}
+.panel-footer .page-item {
+    list-style-type: none;
+    background-image: none;
+    padding-left: 0;
+}
+.panel-footer .page-link {
+    background-color: transparent;
+    border: none;
+    color: #DC143C;
+    font-size: 1.1em;
+    padding: 3px 8px;
+    width: auto;
+    height: auto;
+}
+.panel-footer .page-link:hover {
+    background-color: transparent;
+    color: #990E2A;
+}
+.panel-footer .page-item.active .page-link {
+    background-color: #DC143C;
+    border-color: #DC143C;
+    color: white;
+    border-radius: 4px;
+}
+.panel-footer .page-item.disabled .page-link {
+    background-color: transparent;
+    color: #999;
 }
 
 /* jpages css code for old pagination plugin */
