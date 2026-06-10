@@ -1,86 +1,92 @@
 <div class="wrapper">
+  <div class="posts-tabs">
 
- <!-- top pagination links -->
-<!--<div class="page-holder page-holder-one"></div>
-<br/>-->
+    <div class="folder-tabs-row">
+      <button class="folder-tab active" data-tab="portfolio-pane">Portfolio</button>
+      <button class="folder-tab" data-tab="life-pane">Life</button>
+    </div>
 
-<!--<div id="pag-itemContainer-one" class="posts-list tab-one-list" style="padding-bottom: 0">-->
-<div class="list-group">
-	{% assign counter-one = 0 %}
-	{% for post in site.posts %}
-	{% assign counter-one = counter-one | plus: 1 %}
-		
-	<div class="article-page list-group-item"> <!--This block is what creates the paper-tab illusion-->
-	    <div class="row">
-	    <div class="col-md-10 offset-md-2">
-		<header class="article">
-		    <h2><br/><a href="{{site.url}}{{post.url}}" rel="bookmark">{{post.title}}</a></h2>
-				<div style="display:inline-block; margin-top: 3px; font-family: Baskerville, Garamond, Palatino;">— {{post.category}} —&nbsp;&nbsp;</div>
-		    <time datetime="{{ post.date }}">
-			{{ post.date| date: "%B %-d, %Y" }}
-		    </time>
-		</header>
-	    </div>
-	    <div class="col-md-2"> <!-- THIS IS FOR THE OPTIONAL STICKY TAGS ON THE LEFT -->
-		<!--{% if post.tags %} 
-		    <div class="article-meta article-meta-border">
-		      <dl class="dl-horizontal">
-		      <dt><i class="icon-tags"></i></dt>
-			<dd>
-				{% assign tags = post.tags | join %}
-				
-				{% assign tags = tags | split: "," %}
-				
-				{% for tag in tags %}
-				    <a href="/tags#{{ tag | strip | replace: " ", "-" }}">{{ tag }}</a>
-				{% unless forloop.last %}
-				    <span class="separator">/</span>
-				{% endunless %}
-				{% endfor %}
-		       </dd>
-		      </dl>
-		      <b class="border-notch notch"></b>
-		      <b class="notch"></b>
-		    </div>
-		{% endif %} -->
+    <div class="tab-content-area">
+	<br/>
+      <div class="tab-pane" id="portfolio-pane">
+        {% assign portfolio_posts = site.posts | where: "type", "portfolio" %}
+        <div id="portfolio-list" class="list-group">
+          {% for post in portfolio_posts %}
+          <div class="article-page list-group-item">
+            <div class="row">
+              <div class="col-md-10 offset-md-2">
+                <header class="article">
+                  <h2><br/><a href="{{site.url}}{{post.url}}" rel="bookmark">{{post.title}}</a></h2>
+                  <div style="display:inline-block; margin-top: 3px; font-family: Baskerville, Garamond, Palatino;">— {{post.category}} —&nbsp;&nbsp;</div>
+                  <time datetime="{{ post.date }}">{{ post.date | date: "%B %-d, %Y" }}</time>
+                </header>
+              </div>
+              <div class="col-md-2"></div>
+              <div class="col-md-10 offset-md-2">
+                <section>
+                  <article class="entry">
+                    {% assign wordCount = post.content | number_of_words %}
+                    {% if post.custom_excerpt %}
+                      {{ post.custom_excerpt }}
+                    {% elsif post.content contains '<!--end_summary-->' %}
+                      {{ post.content | split:'<!--end_summary-->' | first }}
+                    {% else %}
+                      {{ post.excerpt | truncatewords: site.EXCERPT_WORDS }}
+                    {% endif %}
+                    {% if wordCount > site.EXCERPT_WORDS %}
+                    <br/><br/>
+                    &emsp;&emsp;<a href="{{site.url}}/{{post.url}}">— continued —</a>
+                    {% endif %}
+                  </article>
+                </section>
+              </div>
+            </div>
+          </div>
+          {% endfor %}
+        </div>
+      </div>
 
-		<!--{ block article_meta }
-		{ endblock } -->
+      <div class="tab-pane tab-hidden" id="life-pane">
+        {% assign life_posts = site.posts | where: "type", "life" %}
+        {% if life_posts.size == 0 %}
+        <p class="no-posts-message">No articles yet — check back soon.</p>
+        {% endif %}
+        <div id="life-list" class="list-group">
+          {% for post in life_posts %}
+          <div class="article-page list-group-item">
+            <div class="row">
+              <div class="col-md-10 offset-md-2">
+                <header class="article">
+                  <h2><br/><a href="{{site.url}}{{post.url}}" rel="bookmark">{{post.title}}</a></h2>
+                  <div style="display:inline-block; margin-top: 3px; font-family: Baskerville, Garamond, Palatino;">— {{post.category}} —&nbsp;&nbsp;</div>
+                  <time datetime="{{ post.date }}">{{ post.date | date: "%B %-d, %Y" }}</time>
+                </header>
+              </div>
+              <div class="col-md-2"></div>
+              <div class="col-md-10 offset-md-2">
+                <section>
+                  <article class="entry">
+                    {% assign wordCount = post.content | number_of_words %}
+                    {% if post.custom_excerpt %}
+                      {{ post.custom_excerpt }}
+                    {% elsif post.content contains '<!--end_summary-->' %}
+                      {{ post.content | split:'<!--end_summary-->' | first }}
+                    {% else %}
+                      {{ post.excerpt | truncatewords: site.EXCERPT_WORDS }}
+                    {% endif %}
+                    {% if wordCount > site.EXCERPT_WORDS %}
+                    <br/><br/>
+                    &emsp;&emsp;<a href="{{site.url}}/{{post.url}}">— continued —</a>
+                    {% endif %}
+                  </article>
+                </section>
+              </div>
+            </div>
+          </div>
+          {% endfor %}
+        </div>
+      </div>
 
-	    </div>
-	    <div class="col-md-10 offset-md-2"> <!-- Article preview -->
-		<section>
-		    <article class="entry">
-		    	{% assign wordCount = post.content | number_of_words %}
-			
-			<!-- ARTICLE PREVIEW -->
-			{% if post.custom_excerpt %}
-			  {{ post.custom_excerpt }}
-			{% elsif post.content contains '<!--end_summary-->' %}
-			  {{ post.content | split:'<!--end_summary-->' | first }}
-			{% else %}
-			  {{ post.excerpt | truncatewords: site.EXCERPT_WORDS }}
-			{% endif %}
-			
-			<!-- add "continued" label for truncated posts-->
-			{% if wordCount > site.EXCERPT_WORDS %} 
-			<br/><br/>
-			&emsp;&emsp;<a href="{{site.url}}/{{post.url}}">— continued —</a>
-			{% endif %}
-			
-			<!--Any ideas about the following code?
-			{ block article_footer } { endblock }
-
-			{ if DISQUS_SHORTNAME }
-			    { block article_comments } { endblock }
-			{ endif }-->
-		    </article>
-		</section>
-	    </div> <!-- span -->
-	    </div> <!-- row -->
-	</div> <!-- article-page -->
-	{% endfor %}
-	</div> <!-- pag-itemContainer-one necessary for pagination script.js -->
-		
-	{% include post-list-pagination.html %}
-</div>
+    </div><!-- .tab-content-area -->
+  </div><!-- .posts-tabs -->
+</div><!-- .wrapper -->

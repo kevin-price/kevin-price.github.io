@@ -1,6 +1,7 @@
 ---
 layout: post
 title: Comparing the US States
+type: portfolio
 category: Data Analysis
 tags: [Data Analysis, JavaScript]
 slug: state-map

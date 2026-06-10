@@ -581,6 +581,73 @@ figcaption {
     color: #999;
 }
 
+/* ===== FOLDER TABS ===== */
+.folder-tabs-row {
+    display: flex;
+    align-items: flex-end;
+    gap: 4px;
+    position: relative;
+    z-index: 2;
+    padding-left: 2rem;
+    margin-bottom: 0;
+}
+
+.folder-tab {
+    background-image: url(../img/bg.jpg);
+    background-attachment: fixed;
+    border: 1px solid rgba(0, 0, 0, 0.22);
+    /* Inactive: bottom border = closed folder line */
+    border-bottom: 1px solid rgba(0, 0, 0, 0.22);
+    border-radius: 5px 5px 0 0;
+    /* Inactive: shorter tab — bottom aligns with active tab */
+    padding: 4px 22px 9px;
+    min-width: 90px;
+    font-family: Baskerville, Garamond, Georgia, serif;
+    font-size: 0.82rem;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    color: #888;
+    cursor: pointer;
+    position: relative;
+    outline: none;
+    transition: color 0.15s, padding-top 0.12s, box-shadow 0.12s;
+    z-index: 1;
+    box-shadow: none;
+    margin-bottom: -1px;
+}
+
+.folder-tab.active {
+    /* Active: taller tab — protrudes upward, open */
+    padding-top: 10px;
+    z-index: 3;
+    color: #DC143C;
+    border-bottom: none;
+    box-shadow: -2px -3px 5px rgba(0, 0, 0, 0.09), 2px -3px 5px rgba(0, 0, 0, 0.09);
+}
+
+.folder-tab:hover:not(.active) {
+    color: #990E2A;
+    padding-top: 7px;
+}
+
+.tab-content-area {
+    position: relative;
+    z-index: 1;
+    border-top: 1px solid rgba(0, 0, 0, 0.22);
+}
+
+.tab-pane.tab-hidden {
+    display: none;
+}
+
+.no-posts-message {
+    font-family: Baskerville, Garamond, Georgia, serif;
+    font-style: italic;
+    color: #aaa;
+    text-align: center;
+    padding: 2rem 0 1rem;
+}
+
 /* jpages css code for old pagination plugin */
 /*.page-holder {
 	text-align: center;

@@ -1,10 +1,10 @@
-{
+﻿{
   "version": "0.0.1",
   "configurations": [
     {
       "name": "jekyll",
       "runtimeExecutable": "bundle",
-      "runtimeArgs": ["exec", "jekyll", "serve", "--port", "4000"],
+      "runtimeArgs": ["exec", "jekyll", "serve", "--livereload"],
       "port": 4000
     }
   ]

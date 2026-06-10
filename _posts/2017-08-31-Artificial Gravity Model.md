@@ -1,6 +1,7 @@
 ---
 layout: post
 title: An Artificial Gravity Computer Model
+type: portfolio
 category: Web Design
 tags: [Computer Modeling, React, JavaScript]
 slug: gravity-model

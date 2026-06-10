@@ -74,9 +74,19 @@ $(function(){
 });
 
 jQuery(document).ready(function ($) {
-    $(".list-group").paginathing({
-      perPage: 4,
-      containerClass: "panel-footer",
+    if ($("#portfolio-list .list-group-item").length > 0) {
+        $("#portfolio-list").paginathing({ perPage: 4, containerClass: "panel-footer" });
+    }
+    if ($("#life-list .list-group-item").length > 0) {
+        $("#life-list").paginathing({ perPage: 4, containerClass: "panel-footer" });
+    }
+
+    $(".folder-tab").on("click", function () {
+        var target = $(this).data("tab");
+        $(".folder-tab").removeClass("active");
+        $(this).addClass("active");
+        $(".tab-pane").addClass("tab-hidden");
+        $("#" + target).removeClass("tab-hidden");
     });
-  });
+});
 

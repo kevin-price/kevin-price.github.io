@@ -1,6 +1,7 @@
 ---
 layout: post
 title: Erin Price's Author Website
+type: portfolio
 category: Web Design
 tags: [JavaScript]
 slug: erin-website
