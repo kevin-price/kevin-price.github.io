@@ -63,11 +63,11 @@ LINKS:
   - title: "Article: Spinning Space Stations"
     link: "https://coriolis-station-article.netlify.app"
   - title: "Open Maze"
-    link: "https://open-maze.netlify.app#&tutorial=true"
+    link: "https://open-maze.netlify.app/?tutorial"
   - title: "Comparing the US States"
-    link: "https://us-states-comparison.netlify.app"
+    link: "https://us-comparison.netlify.app"
   - title: "Erin Price's Author Website"
-    link: "https://erinpricewrites.netlify.app"
+    link: "https://enpricewrites.netlify.app"
 
 
 
