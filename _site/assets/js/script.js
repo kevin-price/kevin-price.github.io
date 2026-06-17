@@ -81,12 +81,22 @@ jQuery(document).ready(function ($) {
         $("#life-list").paginathing({ perPage: 4, containerClass: "panel-footer" });
     }
 
-    $(".folder-tab").on("click", function () {
-        var target = $(this).data("tab");
+    function activateTab(target) {
+        var $tabButton = $(".folder-tab[data-tab='" + target + "']");
+        if ($tabButton.length === 0) { return; }
         $(".folder-tab").removeClass("active");
-        $(this).addClass("active");
+        $tabButton.addClass("active");
         $(".tab-pane").addClass("tab-hidden");
         $("#" + target).removeClass("tab-hidden");
+    }
+
+    $(".folder-tab").on("click", function () {
+        activateTab($(this).data("tab"));
     });
+
+    // Allow direct linking to a tab, e.g. /#life-pane
+    if (window.location.hash) {
+        activateTab(window.location.hash.substring(1));
+    }
 });
 

@@ -48,6 +48,15 @@ Posts are sorted into two tabs on the homepage:
 
 Posts without a `type` field will not appear on the homepage.
 
+#### Linking Directly to a Tab
+
+Each tab can be linked to directly via a URL hash, which activates that tab on page load:
+
+- `https://kevin-price.github.io/#portfolio-pane` — opens directly to the **Portfolio** tab
+- `https://kevin-price.github.io/#life-pane` — opens directly to the **Life** tab
+
+This is handled in `assets/js/script.js`, and is used by the **Life Blog** sidebar link in `_includes/navigation.html`.
+
 #### `image` — Social Preview Override
 
 Each post can specify a custom Open Graph image for social sharing:
