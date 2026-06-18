@@ -12,7 +12,7 @@ I'm Kevin Price — a math teacher, data analyst, and hobbyist developer based i
 
 By day I teach mathematics at **Mathnasium**, working with students from elementary school through calculus. I find genuine satisfaction in meeting a student where they are and watching things click — whether that's place value or integration by parts.
 
-Before teaching, I spent several years as a data analyst at **Mosaic Data Science** (2016–2018), where I worked on real-world analytics problems across a variety of domains. I've continued that work independently, taking on private analytics projects for clients such as **Payton Jones**.
+Before teaching, I spent several years as a data analyst at **Mosaic Data Science** (2016–2018), where I worked on real-world analytics problems across a variety of domains. I've continued that work independently, taking on private analytics projects for clients such as **Payton Jones**, an analyst at Heterodox Academy.
 
 In my free time, I build things for the web. Coding is less a career tool for me than a creative outlet — a way to turn ideas (often math or physics ideas) into something interactive and shareable.
 
