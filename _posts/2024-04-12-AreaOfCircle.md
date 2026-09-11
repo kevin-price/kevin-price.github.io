@@ -1,7 +1,7 @@
 ---
 layout: post
 title: How Humanity Discovered the Area of a Circle
-type: portfolio
+type: life
 category: Mathematics
 tags: [Mathematics]
 slug: area-of-circle
