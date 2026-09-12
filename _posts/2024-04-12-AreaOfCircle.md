@@ -16,11 +16,11 @@ In my search for an intuitive answer, I found myself liking an approach using re
 ### Archimedes' Method
 Before I dive into the regular shapes that Archimedes used, I will start simple: with the area of a triangle. It makes sense that the area of a triangle is $$A=\frac{1}{2}bh$$ because a triangle is a rectangle cut in half. You can draw a rectangle and call one side "b" for base and the other "h" for height ($$A=bh$$). Cut it in half and it will produce two triangles. So, since cutting a rectangle in half makes a triangle, we know that the area of a triangle is $$A=\frac{1}{2}bh$$.
 
-![square](/images/square.png "A triangle is a square cut in half.")
+![square](/resources/square.png "A triangle is a square cut in half.")
 
 This helps me prove another well-established formula, the formula for the area of a regular shape. A *regular* shape is one that has all congruent/equal sides and angles. Here is a regular hexagon. You can see that it is made up of six equal sides, which also gives us six equal triangles.
 
-![hexagon](/images/hexagon.png "Finding the area of a regular hexagon")
+![hexagon](/resources/hexagon.png "Finding the area of a regular hexagon")
 
 Let's look at the bottom triangle. Just like any triangle, we have a base, "b", and a height, "h". For any one of the triangles, the area is $$A=\frac{1}{2} bh$$. You could just multiply this by six identical triangles to get the area of the whole hexagon, or $$A=6*\frac{1}{2} bh$$. It makes sense that the area for the entire shape is just based on the number of sides or triangles in that shape. We can replace the "6" in this formula with a placeholder "n" to denote the number of sides. This allows us to step past hexagons to a regular shape with any number of sides.
 
@@ -47,7 +47,7 @@ $$A=\frac{1}{2}ap$$: $$a$$ is for apothem and $$p$$ is for perimeter.
 
 What happens if we increase the number of sides to infinity? This shape would  become a circle. We call the *perimeter* of this shape the *circumference* (C), and the *apothem* would become equivalent to a *radius* (r). Here, at 16 sides (below), the shape already begins to look like a circle.
 
-![circle](/images/circle.jpg "A circle is a regular shape with infinite sides.")
+![circle](/resources/circle.jpg "A circle is a regular shape with infinite sides.")
 
 We just studied what happens when the number of sides of a regular figure approaches infinity: it becomes a circle. We will rename the variables from the last formula for more circle-friendly variables.
 

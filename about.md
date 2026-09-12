@@ -4,7 +4,7 @@ title: About Me
 permalink: /about/
 ---
 
-![Kevin Price](/images/me.jpg){: style="float: right; margin: 0 0 1em 1.5em; border-radius: 6px; width: 180px;"}
+![Kevin Price](/resources/me.jpg){: style="float: right; margin: 0 0 1em 1.5em; border-radius: 6px; width: 180px;"}
 
 I'm Kevin Price — a math teacher, data analyst, and hobbyist developer based in the United States. My work sits at the intersection of teaching, numbers, and building things with code.
 

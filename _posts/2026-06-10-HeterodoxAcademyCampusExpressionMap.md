@@ -6,7 +6,7 @@ category: Data Analysis
 tags: [Data Analysis, Python, Cartopy]
 slug: heterodox-academy-campus-expression-map
 authors: Kevin Price
-image: /images/HxA-reluctance-map.png
+image: /resources/HxA-reluctance-map.png
 ---
 
 I recently helped Payton Jones, an analyst at [Heterodox Academy](https://heterodoxacademy.org), build a data visualization for one of their reports: ["The Universal Problem of Campus Expression"](https://heterodoxacademy.org/reports/the-universal-problem-of-campus-expression/). The map appears on page 12 of the report and shows how reluctant college students are to discuss controversial topics — and, perhaps more importantly, *where* that reluctance is or isn't concentrated geographically.
@@ -71,7 +71,7 @@ plt.show()
 
 ### What We Found
 
-![Average student reluctance (z-scores) by geographical location across the United States](/images/HxA-reluctance-map.jpg)
+![Average student reluctance (z-scores) by geographical location across the United States](/resources/HxA-reluctance-map.jpg)
 *Figure from the published report.*
 
 After all that iteration, the answer to the original question turned out to be a clean **no** — students' reluctance to discuss controversial topics does not vary meaningfully by geographic region. Wherever a student goes to college, the discomfort discussing politics, race, religion, and gender in class looks remarkably similar. That's arguably a more interesting finding than a regional divide would have been: it suggests the "universal problem" in the report's title is exactly that — universal, not a symptom of any one part of the country.

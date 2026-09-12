@@ -26,7 +26,7 @@ This model came about in several stages. The page started from a simple idea, th
 
 1. The first stage of this model was to calculate the landing position of the outer space coin toss, so I could quantify how "weird" the toss is. The model needed to *compute* these coordinates for the viewer. [This page](https://coriolis-article.netlify.app/math/) explains the math I used.
 
-2. With the landing coordinates, I could calculate the distance the coin would land away from the person; this is the measurable result of the Coriolis effect. I wrote the math [into Python code](/images/CoriolisTable.py) to generate a graph that shows the relationship between the diameter of the station and the "weirdness" of the throw produced by the Coriolis effect. These graphs assume the coin was tossed from four feet up to a total height of 7 feet.
+2. With the landing coordinates, I could calculate the distance the coin would land away from the person; this is the measurable result of the Coriolis effect. I wrote the math [into Python code](/resources/CoriolisTable.py) to generate a graph that shows the relationship between the diameter of the station and the "weirdness" of the throw produced by the Coriolis effect. These graphs assume the coin was tossed from four feet up to a total height of 7 feet.
 
 3. I wanted to demonstrate what any throw would *look* like. I generated a series of points following the coin's movement, allowing me to plot these points on an HTML canvas element. These points needed to be in the *thrower's* reference frame. Again, here is [the math](https://coriolis-article.netlify.app/math-geometry/) I used to develop this portion of the project.
 
@@ -44,13 +44,13 @@ I discovered that an ordinary variable in Python or JavaScript, with fifteen dec
 
 Here is my glitchy Python graph with the standard number of decimal places:
 
-![glitchy_graph](/images/CoriolisGraphGlitchy.png "The Python graph is glitchy with the standard number of decimal places.")
+![glitchy_graph](/resources/CoriolisGraphGlitchy.png "The Python graph is glitchy with the standard number of decimal places.")
 
 Now, with additional decimal places:
 
-![smooth_graph](/images/CoriolisGraph.png "The Python graph is smooth with 30 decimal places.")
+![smooth_graph](/resources/CoriolisGraph.png "The Python graph is smooth with 30 decimal places.")
 
-The Python code I wrote to generate these graphs can be found [here](/images/CoriolisTable.py).
+The Python code I wrote to generate these graphs can be found [here](/resources/CoriolisTable.py).
 
 ##### A Hidden Feature: Querystrings
 

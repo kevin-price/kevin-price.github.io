@@ -44,7 +44,7 @@ kramdown:
 
 DISQUS_SHORTNAME: "priceisright204"
 github_username: kevindprice
-SITELOGO: "/images/me.jpg"
+SITELOGO: "/resources/me.jpg"
 GITHUB_URL: "https://github.com/kevin-price"
 google_analytics: "G-SSHVSFZF4G" #Google Analytics 4
 FACEBOOK_URL: "http://facebook.com/kevin.price.204"
@@ -62,8 +62,8 @@ LINKS:
     link: "https://coriolis-station.netlify.app"
   - title: "Article: Spinning Space Stations"
     link: "https://coriolis-article.netlify.app"
-  - title: "Open Maze"
-    link: "https://open-maze.netlify.app/?tutorial"
+  - title: "Ricochet Maze"
+    link: "https://ricochet-maze.netlify.app/?tutorial"
   - title: "Comparing the US States"
     link: "https://us-comparison.netlify.app"
   - title: "Erin Price's Author Website"

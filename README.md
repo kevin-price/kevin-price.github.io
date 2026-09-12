@@ -33,7 +33,7 @@ category: Mathematics  # display label shown beneath the title
 tags: [Math, Python]   # used for the tags page and sidebar tag links
 slug: my-post-slug
 authors: Kevin Price
-image: /images/my-featured-image.jpg   # optional — overrides the default og:image
+image: /resources/my-featured-image.jpg   # optional — overrides the default og:image
 ---
 ```
 
@@ -62,7 +62,7 @@ This is handled in `assets/js/script.js`, and is used by the **Life Blog** sideb
 Each post can specify a custom Open Graph image for social sharing:
 
 ```yaml
-image: /images/my-featured-image.jpg
+image: /resources/my-featured-image.jpg
 ```
 
 If omitted, the site falls back to the default OG image (`urbanorigami-ai-generated-8909957_1920.jpg`).
