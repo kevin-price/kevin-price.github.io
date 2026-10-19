@@ -126,6 +126,7 @@ p figure {
     font-size: 1rem;
     color: #666;
 }
+
 @media screen and (max-width: 767px) {
     #site-header h1 small {
         display: block;
@@ -231,13 +232,25 @@ p figure {
 }
 
 article h3, article h4, article h5, article h6 {
-    /*margin-top: 0;*/
+	margin-top: 25px;
     text-transform: uppercase;
 
     -webkit-text-shadow: none;
     text-shadow: none;
 
     font-weight: 700;
+}
+
+header.article h3.article-subtitle {
+    font-family: Georgia, serif;
+    font-size: 1rem;
+    font-weight: normal;
+    font-style: italic;
+    color: #666;
+    margin-top: 0.35rem;
+    margin-bottom: 0.25rem;
+    line-height: 1.3rem;
+    text-shadow: none;
 }
 
 header.article h2 {
@@ -266,6 +279,21 @@ header.article h2 {
 
 header.article h2 a {
     color: #000000;
+}
+
+/* Mute and underline links within article text */
+article p a, 
+article li a {
+    color: #A6243D; /* A slightly deeper, richer, less neon brick-red */
+    text-decoration: underline;
+    text-decoration-thickness: 1px;
+    text-underline-offset: 2px;
+}
+
+article p a:hover, 
+article li a:hover {
+    color: #7D1A2E;
+    text-decoration-thickness: 2px;
 }
 
 .article-meta {
@@ -540,7 +568,7 @@ li {
 }
 
 blockquote {
-    margin: 2rem 0;
+    margin: 1rem 0;
 }
 
 blockquote p {
